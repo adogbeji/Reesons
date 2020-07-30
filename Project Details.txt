@@ -1,0 +1,5 @@
+Project Overview
+
+Objective: To build a website for an Estate Agents' called Reesons who specialise in selling high-quality apartments & student accommodation.
+
+Started: 21/7/20
