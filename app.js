@@ -41,7 +41,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//For Next Time: Start aligning header text on small-screen devices!
 
 app.get("/", (req, res) => {
   res.render("home");
