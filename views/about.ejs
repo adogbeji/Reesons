@@ -1,0 +1,145 @@
+<%- include("partials/about-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style media="all">
+      .about-page {
+        width: 100vw;
+        background-color: #FE91CA;
+      }
+
+      .text-container--1 {
+        width: 90%;
+        margin: auto;
+        padding-top: 80px;
+        text-align: center;
+        /* background-color: #FF0000; */
+      }
+
+      .text-1 {  /* Targeting small-screen devices & others */
+        font-family: 'Zilla Slab', serif;
+        font-weight: 700;
+        font-size: 2.8rem;  /* Small-screen only */
+        color: #000000;
+      }
+
+      @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+        .text-1 {
+          transform: translateX(-7px);
+        }
+      }
+
+      @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+        .text-1 {
+          font-size: 3.2rem;
+        }
+      }
+
+      .text-container--2 {  /* Targeting small-screen devices & others */
+        width: 75%;  /* Small-screen only */
+        margin: auto;
+        /* background-color: grey; */
+      }
+
+      @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+        .text-container--2 {
+          width: 60%;
+          transform: translateX(-12px);
+        }
+      }
+
+      .spacer-1 {
+        padding-top: 20px;
+      }
+
+      .img-box {
+        width: 100%;
+      }
+
+      .img-box .estate-agent {
+        max-width: 100%;
+        height: auto;
+        width: 300px;
+        border-radius: 30px;
+        float: left;
+        margin-right: 15px;
+      }
+
+      @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+        .img-box .estate-agent {
+          width: 200px;
+          border-radius: 25px;
+          transform: translateX(5px);  /* Helps centre image */
+        }
+      }
+
+      .text-2 {
+        font-family: 'Zilla Slab', serif;
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: #000000;
+      }
+
+      .spacer-2 {  /* Targeting small-screen devices */
+        padding: 5px 0 80px 0;
+      }
+
+      @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+        .spacer-2 {
+          padding: 5px 0 100px 0;
+        }
+      }
+
+      .img-box .tablet {
+        max-width: 100%;
+        height: auto;
+        width: 300px;
+        border-radius: 30px;
+        float: right;
+        margin-left: 10px;
+      }
+
+      @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+        .img-box .tablet {
+          width: 200px;
+          border-radius: 25px;
+          transform: translateX(-8px);  /* Helps centre image */
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <section class="about-page">
+      <div class="container-fluid">
+  <div class="text-container--1">
+    <h3 class="text-1">About Us</h3>
+  </div>
+  <div class="text-container--2">
+    <div class="spacer-1">
+      <div class="img-box">
+    <img class="estate-agent" src="Images/Img-10.jpg" alt="An Estate Agent doing property views on a computer">
+    <p class="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Gravida quis blandit turpis cursus in hac habitasse platea dictumst. Tincidunt praesent semper feugiat nibh sed pulvinar. Egestas maecenas pharetra convallis posuere morbi leo urna molestie at. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Non blandit massa enim nec. Augue ut lectus arcu bibendum at. Nam at lectus urna duis convallis convallis tellus. Ipsum faucibus vitae aliquet nec. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Donec ultrices tincidunt arcu non sodales neque. Sed cras ornare arcu dui vivamus arcu felis. Tristique sollicitudin nibh sit amet commodo nulla facilisi nullam. Vivamus arcu felis bibendum ut tristique et. Dolor morbi non arcu risus quis. Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Dictum sit amet justo donec enim. Quisque egestas diam in arcu cursus euismod. Sit amet justo donec enim diam vulputate ut pharetra sit. Erat pellentesque adipiscing commodo elit. Aliquet risus feugiat in ante metus dictum at tempor. Tristique senectus et netus et malesuada fames. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Risus at ultrices mi tempus imperdiet nulla malesuada. Enim blandit volutpat maecenas volutpat blandit. Purus in mollis nunc sed id semper. Mattis ullamcorper velit sed ullamcorper. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Lacus luctus accumsan tortor posuere ac ut.</p>
+  </div>
+</div>
+<div class="spacer-2">
+  <div class="img-box">
+    <img class="tablet" src="Images/Img-11.jpg" alt="A tablet showing property information/data">
+    <p class="text-2">Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Dictum sit amet justo donec enim. Quisque egestas diam in arcu cursus euismod. Sit amet justo donec enim diam vulputate ut pharetra sit. Erat pellentesque adipiscing commodo elit. Aliquet risus feugiat in ante metus dictum at tempor. Tristique senectus et netus et malesuada fames. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Risus at ultrices mi tempus imperdiet nulla malesuada. Enim blandit volutpat maecenas volutpat blandit. Purus in mollis nunc sed id semper. Mattis ullamcorper velit sed ullamcorper. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Lacus luctus accumsan tortor posuere ac ut.Hendrerit dolor magna eget est lorem ipsum dolor sit amet. Dictum sit amet justo donec enim. Quisque egestas diam in arcu cursus euismod. Sit amet justo donec enim diam vulputate ut pharetra sit. Erat pellentesque adipiscing commodo elit. Aliquet risus feugiat in ante metus dictum at tempor. Tristique senectus et netus et malesuada fames. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing. Risus at ultrices mi tempus imperdiet nulla malesuada. Enim blandit volutpat maecenas volutpat blandit. Purus in mollis nunc sed id semper. Mattis ullamcorper velit sed ullamcorper. Ut morbi tincidunt augue interdum velit euismod in pellentesque massa. Lacus luctus accumsan tortor posuere ac ut.</p>
+  </div>
+</div>
+</div>
+</div>
+    </section>
+
+  </body>
+</html>
+
+<%- include("partials/footer"); -%>

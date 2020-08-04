@@ -41,9 +41,14 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+//For Next Time; Start building 'Pricing' Page!
 
 app.get("/", (req, res) => {
   res.render("home");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 const port = process.env.PORT;
