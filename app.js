@@ -41,7 +41,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//For Next Time; Start building 'Pricing' Page!
+//For Next Time: Begin styling price cards on 'Pricing' Page!
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -49,6 +49,10 @@ app.get("/", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about");
+});
+
+app.get("/pricing", (req, res) => {
+  res.render("pricing");
 });
 
 const port = process.env.PORT;
