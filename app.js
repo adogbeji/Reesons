@@ -55,6 +55,10 @@ app.get("/pricing", (req, res) => {
   res.render("pricing");
 });
 
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
 const port = process.env.PORT;
 
 app.listen(port, (req, res) => {

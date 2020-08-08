@@ -1,0 +1,164 @@
+<%- include("partials/contact-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .contact-page {
+      width: 100vw;
+      background-color: #1B262C;
+    }
+
+    .form-container {
+      width: 85%;
+      margin: auto;
+      padding: 100px 0 200px 0;
+      /* background-color: #000000; */
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .form-container {
+        padding-bottom: 130px;
+      }
+    }
+
+    .header-container {
+      width: 90%;
+      margin: auto;
+      text-align: center;
+      padding-bottom: 60px;
+      /* background-color: #FF0000; */
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 2.6rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 3rem;
+      }
+    }
+
+    .card-colour {
+      border: none;
+      background-color: #1B262C;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .card-colour {
+        transform: translateX(-2px);
+      }
+    }
+
+    .form-group input {
+      border-radius: 0;
+    }
+
+    .text-colour--1 {
+      color: #000000;
+    }
+
+    .text-colour--2 {
+      color: #FFFFC5;
+    }
+
+    .text-colour--3 {
+      color: #FF0000;
+    }
+
+    .form-group textarea {
+      border-radius: 0;
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      border-radius: 0;
+      background-color: #000000;
+    }
+
+    .button-colour:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .form-submit--text {  /* Targeting small-screen devices & others */
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 2.6rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .form-submit--text {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="contact-page">
+    <div class="container-fluid">
+      <div class="form-container">
+        <div class="header-container">
+          <h3 class="text-1">Want to shoot us a message? Fill out the form below!</h3>
+        </div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-8">
+              <div class="card card-colour">
+                <div class="card-body">
+                  <form class="gform" action="/contact" method="post">
+                    <div class="form-elements">
+                    <div class="form-group">
+                      <label for="clientName"><span class="font-weight-bold text-colour--1">Your Name:</span></label>
+                      <input type="email" name="name" class="form-control" id="clientName" aria-describedby="privacy1" autocomplete="off" placeholder="eg. Paul Smith">
+                      <small id="privacy1" class="form-text text-colour--2">We'll <span class="font-weight-bold font-italic text-colour--3">never</span> share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="clientEmail"><span class="font-weight-bold text-colour--1">Your Email:</span></label>
+                      <input type="email" name="email" class="form-control" id="clientEmail" aria-describedby="privacy2" autocomplete="off" placeholder="eg. tommy@email.com">
+                      <small id="privacy2" class="form-text text-colour--2">We'll <span class="font-weight-bold font-italic text-colour--3">never</span> share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="clientMessage"><span class="font-weight-bold text-colour--1">Your Message:</span></label>
+                      <textarea id="clientMessage" name="name" class="form-control" rows="15" autofocus></textarea>
+                    </div>
+                    <button type="submit" class="btn button-colour btn-block">Submit</button>
+                    </div>
+                    <div class="thankyou_message text-center" style="display: none;">
+                      <h2 class="form-submit--text"><strong><em>Thanks</em></strong> for contacting us! We'll be in touch soon!</h2>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

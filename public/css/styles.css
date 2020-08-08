@@ -143,17 +143,17 @@ body {
   margin-top: 25px;
 }
 
-.card {
-  border-radius: 0;
-}
-
 @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
   .card {
     transform: scale(0.95) translateX(-5px);
   }
 }
 
-.sect_a-card--colour {
+.sect_a-card-colour--2 {
+  border-radius: 0;
+}
+
+.sect_a-card-colour--1 {
   border: none;
   background-color: #1B262C;
 }
@@ -171,7 +171,7 @@ body {
   color: #000000;
 }
 
-.form-group input {
+.sect_a-form input {
   border-radius: 0;
 }
 
