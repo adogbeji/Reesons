@@ -41,7 +41,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//For Next Time: Start building 'Register' Page!
+// For Next Time: Start building 'Register' Page!
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -57,6 +57,14 @@ app.get("/pricing", (req, res) => {
 
 app.get("/contact", (req, res) => {
   res.render("contact");
+});
+
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+
+app.get("/success", (req, res) => {  // Testing Route
+  res.render("contact-success");
 });
 
 app.get("/login", (req, res) => {
