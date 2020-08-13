@@ -20,6 +20,7 @@
       width: 90%;
       margin: auto;
       padding: 100px 0;
+      text-align: center;
       /* background-color: #000000; */
     }
 
@@ -56,6 +57,53 @@
         transform: translateX(-3px);
       }
     }
+
+    .contact-button {  /* Targeting small-screen devices & others */
+      width: 75%;  /* Small-screen */
+      padding: 15px 0;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .contact-button {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .contact-button a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
+        transform: translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .contact-button a:nth-child(1) {
+        transform: translateY(-40px);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .contact-button a:nth-child(1) {
+        transform: translateY(-60px);
+      }
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .button-colour:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .button-size {
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 
@@ -69,6 +117,9 @@
             <h1 class="text-1">Ooops... there's been an error!</h1>
             <p class="text">Please re-send your message:</p>
           </div>
+        </div>
+        <div class="contact-button">
+          <a href="/contact" class="btn button-colour btn-lg button-size"><span class="font-weight-bold align-middle">Contact</span></a>
         </div>
       </div>
     </div>

@@ -63,8 +63,8 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.get("/failure", (req, res) => {  // Testing Route
-  res.render("contact-failure");
+app.get("/success", (req, res) => {  // Testing Route
+  res.render("register-success");
 });
 
 app.get("/login", (req, res) => {
