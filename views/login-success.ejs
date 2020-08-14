@@ -1,0 +1,147 @@
+<%- include("partials/login-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style media="all">
+    hr {
+      border-style: none;  /* This removes default <hr> border-style(inset) & width(1px) */
+      border-top-style: dashed;
+      border-width: 10px;
+      border-color: #00FF00;
+      width: 100%;  /* Width is relative to parent 'hr-container' div */
+    }
+    .login-succes--page {
+      width: 100vw;
+      background-color: #1B262C;
+    }
+
+    .success-page {
+      width: 90%;
+      margin: auto;
+      padding: 100px 0;
+      text-align: center;
+      /* background-color: #000000; */
+    }
+
+    .success-background {
+      background-color: #1B262C;
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 3rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-12px)
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 4rem;
+      }
+    }
+
+    .hr-container {
+      width: 30%;  /* This sets visible <hr> width & makes it dynamic */
+      margin: 8px 0;
+    }
+
+    .text {
+      font-size: 1rem;
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text {
+        transform: translateX(-5px);
+      }
+    }
+
+    .account-button {  /* Targeting small-screen devices & others */
+      width: 75%;  /* Small-screen */
+      padding: 15px 0;
+      margin-bottom: 40px;
+      display: inline-block;
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .account-button {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (max-width: 600px) { /* Targeting small-screen devices */
+      .account-button a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .account-button a:nth-child(1) {
+        transform: translateY(-40px);
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .account-button a:nth-child(1) {
+        transform: translateY(-60px);
+      }
+    }
+
+    .button-colour {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .button-colour:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    .button-size {
+      width: 180px;
+      height: 60px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="login-succes--page">
+    <div class="container-fluid">
+      <div class="success-page">
+        <div class="jumbotron jumbotron-fluid text-center success-background">
+          <div class="container">
+            <h1 class="text-1">Login Successful!</h1>
+            <div class="hr-container mx-auto">
+              <hr>
+            </div>
+            <p class="text">Please head over to your account:</p>
+          </div>
+        </div>
+        <div class="account-button">
+          <a href="/account" class="btn button-colour btn-lg button-size"><span class="font-weight-bold align-middle">My Account</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>
