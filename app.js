@@ -24,7 +24,13 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => {
+  console.log("MongoDB connected!");
+})
+.catch(err => {
+  console.log(err);
+});
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -41,7 +47,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// For Next Time: Start building Register 'Failure' Page!
+// For Next Time: Start building Login 'Failure' Page!
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -63,12 +69,16 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.get("/success", (req, res) => {  // Testing Route
-  res.render("login-success");
+app.get("/failure", (req, res) => {  // Testing Route
+  res.render("login-failure");
 });
 
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.get("/newsletter", (req, res) => {
+  res.render("newsletter");
 });
 
 const port = process.env.PORT;

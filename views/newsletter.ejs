@@ -1,0 +1,74 @@
+<%- include("partials/newsletter-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .newsletter-page {
+      width: 100vw;
+      background-color: #1B262C;
+    }
+
+    .text-container--1 {  /* Targeting small-screen devices & others */
+      width: 90%;
+      margin: auto;
+      padding-top: 100px;  /* Small-screen */
+      text-align: center;
+      /* background-color: #FF0000; */
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
+      .text-container--1 {
+        padding-top: 200px;
+      }
+    }
+
+    @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
+      .text-container--1 {
+        padding-top: 220px;
+      }
+    }
+
+    .text-1 {  /* Targeting small-screen devices & others */
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 2.3rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-3px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="newsletter-page">
+    <div class="container-fluid">
+      <div class="text-container--1">
+        <h3 class="text-1">Sign-up to our monthly newsletter so don't miss a beat!</h3>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>
