@@ -900,11 +900,11 @@ body {
   }
 }
 
-.form-input input {
+.sect_h-input {
   border-radius: 0;
 }
 
-.form-button button {
+.sect_h-button {
   border-radius: 0;
 }
 

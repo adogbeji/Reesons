@@ -1,0 +1,81 @@
+<%- include("partials/newsletter-header"); -%>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style media="all">
+    .newsletter-success--page {
+      width: 100vw;
+      background-color: #1B262C;
+    }
+
+    .success-page {
+      width: 90%;
+      margin: auto;
+      padding: 100px 0;
+      /* background-color: #000000; */
+    }
+
+    .success-background {
+      background-color: #1B262C;
+    }
+
+    .text-1 {  /* Targeting small-screen devices */
+      font-family: 'Zilla Slab', serif;
+      font-weight: 700;
+      font-size: 3.1rem;  /* Small-screen */
+      color: #FFFF00;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text-1 {
+        transform: translateX(-5px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .text-1 {
+        font-size: 4rem;
+      }
+    }
+
+    .text {
+      font-size: 1rem;
+      color: #FFFFFF;
+    }
+
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .text {
+        transform: translateX(-3px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="newsletter-success--page">
+    <div class="container-fluid">
+      <div class="success-page">
+        <div class="jumbotron jumbotron-fluid text-center success-background">
+          <div class="container">
+            <h1 class="text-1">Thanks for signing up!</h1>
+            <p class="text">Please go to your account or back to our home page:</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+<%- include("partials/footer"); -%>

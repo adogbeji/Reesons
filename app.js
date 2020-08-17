@@ -47,7 +47,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// For Next Time: Start building Login 'Failure' Page!
+//For Next Time: continue building Newsletter 'Success' Page
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -69,8 +69,8 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.get("/failure", (req, res) => {  // Testing Route
-  res.render("login-failure");
+app.get("/success", (req, res) => {  // Testing Route
+  res.render("newsletter-success");
 });
 
 app.get("/login", (req, res) => {
