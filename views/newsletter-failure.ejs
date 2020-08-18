@@ -11,12 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Zilla+Slab:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style media="all">
-    .newsletter-success--page {
+    .newsletter-failure--page {
       width: 100vw;
       background-color: #1B262C;
     }
 
-    .success-page {
+    .failure-page {
       width: 90%;
       margin: auto;
       padding: 100px 0;
@@ -24,20 +24,20 @@
       /* background-color: #000000; */
     }
 
-    .success-background {
+    .failure-background {
       background-color: #1B262C;
     }
 
-    .text-1 {  /* Targeting small-screen devices */
+    .text-1 {  /* Targeting small-screen devices and others */
       font-family: 'Zilla Slab', serif;
       font-weight: 700;
-      font-size: 3.1rem;  /* Small-screen */
+      font-size: 3.4rem;  /* Small-screen */
       color: #FFFF00;
     }
 
     @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
       .text-1 {
-        transform: translateX(-5px);
+        transform: translateX(-3px);
       }
     }
 
@@ -48,50 +48,37 @@
     }
 
     .text {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #FFFFFF;
     }
 
-    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-      .text {
-        transform: translateX(-5px);
-      }
-    }
-
-    .pathway-buttons {
-      width: 90%;
+    .newsletter-button {  /* Targeting small-screen devices & others */
+      width: 75%;  /* Small-screen */
       padding: 15px 0;
       margin-bottom: 40px;
       display: inline-block;
     }
 
-    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
-      .pathway-buttons a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
-        margin-bottom: 5px;
-        transform: translateX(-5px);
+    @media only screen and (min-width: 768px) {  /* Targeting medium-screen devices and up */
+      .newsletter-button {
+        width: 50%;
       }
+    }
 
-      .pathway-buttons a:nth-child(2) {
+    @media only screen and (max-width: 600px) {  /* Targeting small-screen devices */
+      .newsletter-button a:nth-child(1) {  /* NOTE: :first-child selector DOESN'T work!! */
         transform: translateX(-5px);
       }
     }
 
     @media only screen and (min-width: 768px) and (max-width: 992px) {  /* Targeting medium-screen devices */
-      .pathway-buttons a:nth-child(1) {
-        transform: translateY(-40px);
-      }
-
-      .pathway-buttons a:nth-child(2) {
+      .newsletter-button a:nth-child(1) {
         transform: translateY(-40px);
       }
     }
 
     @media only screen and (min-width: 992px) {  /* Targeting large-screen devices and up */
-      .pathway-buttons a:nth-child(1) {
-        transform: translateY(-60px);
-      }
-
-      .pathway-buttons a:nth-child(2) {
+      .newsletter-button a:nth-child(1) {
         transform: translateY(-60px);
       }
     }
@@ -116,18 +103,17 @@
 
 <body>
 
-  <section class="newsletter-success--page">
+  <section class="newsletter-failure--page">
     <div class="container-fluid">
-      <div class="success-page">
-        <div class="jumbotron jumbotron-fluid text-center success-background">
+      <div class="failure-page">
+        <div class="jumbotron jumbotron-fluid text-center failure-background">
           <div class="container">
-            <h1 class="text-1">Thanks for signing up!</h1>
-            <p class="text">Please go to your account or back to our home page:</p>
+            <h1 class="text-1">Ooops... there's been an error!</h1>
+            <p class="text">Please try again:</p>
           </div>
         </div>
-        <div class="pathway-buttons">
-          <a href="/account" class="btn button-colour btn-lg button-size"><span class="font-weight-bold align-middle">My Account</span></a>
-          <a href="/" class="btn button-colour btn-lg button-size"><span class="font-weight-bold align-middle">Home Page</span></a>
+        <div class="newsletter-button">
+          <a href="/newsletter" class="btn button-colour btn-lg button-size"><span class="font-weight-bold align-middle">Newsletter</span></a>
         </div>
       </div>
     </div>
