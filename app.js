@@ -32,8 +32,10 @@ mongoose.connect("mongodb://localhost:27017/userDB", {useNewUrlParser: true, use
   console.log(err);
 });
 
+mongoose.set("useCreateIndex", true);
+
 const userSchema = new mongoose.Schema({
-  username: String,
+  name: String,
   email: String,
   password: String
 });
@@ -47,7 +49,6 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-//For Next Time: continue building Newsletter 'Success' Page
 
 app.get("/", (req, res) => {
   res.render("home");
@@ -69,12 +70,37 @@ app.get("/register", (req, res) => {
   res.render("register");
 });
 
-app.get("/failure", (req, res) => {  // Testing Route
-  res.render("newsletter-failure");
-});
-
 app.get("/login", (req, res) => {
   res.render("login");
+});
+
+app.post("/register", (req, res) => {
+  User.register({username: req.body.username}, req.body.password, (err, user) => {
+    if (err) {
+      res.render("register-failure");
+    } else {
+      passport.authenticate("local")(req, res, function() {
+        res.render("register-success");  //Should be a redirect to account page
+      });
+    }
+  });
+});
+
+app.post("/login", (req, res) => {
+  const user = new User({
+    username: req.body.username,
+    password: req.body.password
+  });
+
+  req.login(user, function(err) {
+    if (err) {
+      res.render("login-failure");
+    } else {
+      passport.authenticate("local")(req, res, function() {
+        res.render("login-success");  //Should be a redirect to account page
+      });
+    }
+  });
 });
 
 app.get("/newsletter", (req, res) => {
